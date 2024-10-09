@@ -1,0 +1,330 @@
+/*GLOBALES*/
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --primario: #ff6207;
+    --secundario: #00a775;
+    --gris:#757575;
+
+    --fuentes-principal: 4rem;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /*BOX MODEL*/
+    scroll-snap-type: y mandatory;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/*Scroll Snap -Sirve para detener por secciones la pagina-*/
+.servicios, 
+.navegacion-principal, 
+.formulario,
+.footer {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/*BOX MODEL*/
+
+.contenedor{
+    /*
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+    max-width: 120rem;
+    margin: 0 auto ; /*Para colocar el margin y no poner margin top, right, bottom, lefth en cuestion de ponerle todos los rangos en la linea de margin */
+
+
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem; 
+    margin-top: 1rem;   
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    width: 70%;
+    text-align: center;
+    border: none;
+
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: #e90a0a;
+}
+
+.boton:active {
+    background-color: #026e4e;
+}
+
+.sombra {
+    -webkit-box-shadow: 9px 6px 11px 0px rgba(99,91,99,0.64);
+    -moz-box-shadow: 9px 6px 11px 0px rgba(99,91,99,0.64);
+    box-shadow: 9px 6px 11px 0px rgba(99,91,99,0.64);
+    background-color: #86a5d4;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+/*TIPOGRAFIA*/
+body {
+    font-size: 16px;/*1 rem = 10 px*/
+    font-family: "Nunito", sans-serif;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+/*1 rem = 10px (con las lineas de codigo de html a 62.5% y body 16px)*/
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+/*
+.titulo {
+    text-align: center;
+    font-size: var(--fuentes-principal);
+    color: var(--primario);
+} */
+/*Se puede conjugar los selectores para unirlos y asi tener un margen claro de que lineas de codigo se 
+haran los cambios por ejemplo --h1 span-- afectara al span que este dentro solamente del h1 y no afectara
+a todos los demas span o al contrario si solo se coloca span afectara a todos los span del codigo html*/
+
+/*
+h1.titulo span {
+    font-size: 2rem;
+    color: rgb(88, 233, 31);
+}
+    */
+
+    /*TITULOS*/
+.titulo span {
+    font-size: 2rem;
+    color: rgb(223, 14, 14);
+}
+
+/* La especifidad lo que hace es que especificara de manera mas profunda aquellas lineas de codigo
+las cuales se veran afectadas y asi no tenerlo mas de manera general y aplicara los estilos aquellas
+lineas que esten mas definidas. */
+
+/*UTILIDADES*/
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+    
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+
+/*NAVEGACION*/
+.nav-bg{
+   background-color: var(--secundario); 
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: solid;
+    display: inline-block;    
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--negro)
+}
+
+/*HERO*/
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;  
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*Codigo para poder centrar cualquier item dentro de los contenedores para 
+    cualquier proyecto. Vertical y horizontalmente*/
+}
+
+.contenido-hero h2, 
+.contenido-hero p {
+    color: var(--blanco);
+
+}
+
+/*SERVICIOS*/
+
+@media (min-width: 480px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1.5rem;
+        /*grid-template-rows: 200px 800px;*/
+        /*grid: 200px 800px 300px 300px -Una manera similar de conjugar los grid-*/
+    }       
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: rgba(32, 107, 3, 0.911);
+    font-weight: 600;
+}
+
+.servicio p {
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.servicio .icons {
+    height: 12rem;
+    width: 12rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+/*CONTACTO*/
+
+.formulario {
+    background-color: var(--gris);
+    width: min(70rem, 100%); /*Utilizara el valor más pequeño*/
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+/*CAMPOS*/
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /*50% 50%*/
+        grid-template-rows: auto auto ;
+        column-gap: 1rem;
+    }      
+    .campo:nth-child(3),
+    .campo:nth-child(4),
+    .campo:nth-child(5){
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label,
+.campo p {
+    color: var(--blanco);
+    font-weight: bold;  
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+    resize: vertical;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.enviar .boton {
+    width: 100%;
+}
+
+/*FOOTER*/
+
+.footer {
+    text-align: center;
+}
