@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Tienda</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="LOGO">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1 id="nombre-producto"></h1> <!-- Título dinámico del producto -->
+
+        <div class="camisa">
+            <img id="imagen-producto" class="camisa__imagen" src="" alt="Imagen de producto"> <!-- Imagen dinámica -->
+
+            <div class="camisa__contenido">
+                <p id="descripcion-producto"></p> <!-- Descripción dinámica -->
+
+                <form class="formulario" id="formulario-producto">
+                    <select class="formulario__campo">
+                        <option disabled selected>Selecciona una Talla</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input id="cantidad" class="formulario__campo" type="number" placeholder="Cantidad" min="1" max="8">
+                    <p id="mensaje" class="mensaje" style="color: red; display: none;">Has alcanzado la cantidad máxima
+                        permitida (8).</p>
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">FrontEnd - Todos los Derechos Reservados 2024</p>
+    </footer>
+
+    <script>
+        // Información de productos
+        const productos = {
+            1: {
+                nombre: "VueJS",
+                imagen: "img/1.jpg",
+                descripcion: "Es un framework progresivo para construir interfaces de usuario. A diferencia de otros frameworks monolíticos, Vue está diseñado desde cero para ser utilizado incrementalmente."
+            },
+            2: {
+                nombre: "AngularJS",
+                imagen: "img/2.jpg",
+                descripcion: "AngularJS, es un framework de JavaScript de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página. Construye aplicaciones robustas."
+            },
+            3: {
+                nombre: "ReactJS",
+                imagen: "img/3.jpg",
+                descripcion: "React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Construye interfaces de usuario."
+            },
+            4: {
+                nombre: "Redux",
+                imagen: "img/4.jpg",
+                descripcion: "Redux es una biblioteca JavaScript de código abierto para el manejo del estado de las aplicaciones. Es comúnmente usada con otras librerías como React o Angular para la construcción de Interfaces de Usuario."
+            },
+            5: {
+                nombre: "NoteJS",
+                imagen: "img/5.jpg",
+                descripcion: "Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google."
+            },
+            6: {
+                nombre: "SASS",
+                imagen: "img/6.jpg",
+                descripcion: "Es un preprocesador de CSS compatible con todas sus versiones. Por lo tanto, se trata de una herramienta utilizada por los desarrolladores web para traducir un código de hojas de estilo no estándar a un código CSS estándar, legible por la mayoría de los navegadores."
+            },
+            7: {
+                nombre: "Html5",
+                imagen: "img/7.jpg",
+                descripcion: "Es la última versión de HyperText Markup Language (Lenguaje de Marcado de Hipertexto). Combina tres tecnologías web: HTML, para construir la estructura de la página; CSS, para mejorar la presentación; y JavaScript, para agregar funcionalidad a los elementos HTML."
+            },
+            8: {
+                nombre: "GitHub",
+                imagen: "img/8.jpg",
+                descripcion: "GitHub es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git. Éste permite a los desarrolladores colaborar y realizar cambios en proyectos compartidos, a la vez que mantienen un seguimiento detallado de su progreso."
+            },
+            9: {
+                nombre: "BulmaCSS",
+                imagen: "img/9.jpg",
+                descripcion: "Bulma es un marco gratuito y de código abierto que proporciona componentes frontend listos para usar que puedes combinar fácilmente para crear interfaces web responsivas."
+            },
+            10: {
+                nombre: "TypeScript",
+                imagen: "img/10.jpg",
+                descripcion: "TypeScript es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases."
+            },
+            11: {
+                nombre: "Drupal",
+                imagen: "img/11.jpg",
+                descripcion: "Drupal es un sistema de gestión de contenidos multipropósito, modular, libre y con una amplia capacidad de personalización. Te permite publicar archivos, imágenes, artículos, al igual que crear y administrar todo tipo de contenidos como votaciones, encuestas, foros, entre otros."
+            },
+            12: {
+                nombre: "JavaScript",
+                imagen: "img/12.jpg",
+                descripcion: "JavaScript es un lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas. Desde actualizar fuentes de redes sociales a mostrar animaciones y mapas interactivos, las funciones de JavaScript pueden mejorar la experiencia del usuario de un sitio web."
+            },
+            13: {
+                nombre: "GraphQL",
+                imagen: "img/13.jpg",
+                descripcion: "GraphQL es un lenguaje de consulta y manipulación de datos para APIs, y un entorno de ejecución para realizar consultas con datos existentes.​ "
+            },
+            14: {
+                nombre: "WordPress",
+                imagen: "img/14.jpg",
+                descripcion: "WordPress es una plataforma de gestión de contenidos, representa un software de código abierto altamente versátil que permite a los usuarios crear y desarrollar sitios web personalizados de manera sencilla, adaptable y profesional, con una muy buena experiencia de usuario."
+            }
+        };
+
+        // Obtener el parámetro de la URL (id del producto)
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Obtener el producto y mostrarlo
+        const producto = productos[productId];
+
+        if (producto) {
+            document.getElementById('nombre-producto').textContent = producto.nombre;
+            document.getElementById('imagen-producto').src = producto.imagen;
+            document.getElementById('descripcion-producto').textContent = producto.descripcion;
+        } else {
+            // Si el producto no se encuentra, mostrar un mensaje de "producto no encontrado"
+            document.getElementById('nombre-producto').textContent = "Producto no encontrado";
+            document.getElementById('imagen-producto').src = "img/default.jpg"; // Imagen por defecto
+            document.getElementById('descripcion-producto').textContent =
+                "Lo sentimos, el producto que buscas no está disponible.";
+
+            // Opcional: Ocultar el formulario si no quieres que aparezca en productos no encontrados
+            document.getElementById('formulario-producto').style.display = "none";
+        }
+
+        // Mostrar mensaje si se alcanza el máximo de cantidad
+        const inputCantidad = document.getElementById('cantidad');
+        const mensaje = document.getElementById('mensaje');
+
+        inputCantidad.addEventListener('input', function () {
+            const valor = parseInt(this.value);
+
+            if (valor >= this.max) {
+                mensaje.style.display = 'block';
+            } else {
+                mensaje.style.display = 'none';
+            }
+        });
+
+        // Redirigir al hacer clic en "Agregar al Carrito"
+        const formulario = document.getElementById('formulario-producto');
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+        });
+    </script>
+</body>
+
+</html>
