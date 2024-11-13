@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo_size.jpg" type="image/x-icon">
+    <meta name="description" content="Página Web de Blog de Café">
+    <title>Blog Café</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BlogDeCafé">
+    <meta property="og:image" content="/img/logo_size.jpg">
+    <!--PREFETCH-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+    <!--Actualizar jqueary para funcionamiento de boton subir -->
+    <!--PRELOAD-->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/normalize.css" as="style">    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Outfit&display=swap"
+    crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Outfit&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="./font/fontello.css" as="style">
+    <link rel="stylesheet" href="./font/fontello.css">
+    <link rel="preload" href="./font/style.css" as="style">
+    <link rel="stylesheet" href="./font/style.css">
+    <link rel="preload" href="../js/up.js" as="style">
+    <script src="../js/up.js"></script>
+    <link rel="preload" href="https://code.jquery.com/jquery-3.7.0.min.js" as="query">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+
+    <span class="ir-arriba icon-up-circle"></span>
+
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de Café (Consejos para mejorar y cursos)</h2>
+            <p class="no-margin">Aprende con los mejores una gran experiencia a adquirir.</p>
+        </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3 class="centrar-texto">Nuestro Blog</h3>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loeadin="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagenblog">
+                    </picture>
+                </div>
+                <div class="entrada-contenido centrar-texto">
+                    <h4 class="no-margin centrar-texto">Tipos de Grano de Café</h4>
+                    <p> Fusce commodo luctus nunc id tincidunt. Vivamus lacinia risus ut nibh fermentum ultrices. Cras
+                        viverra nibh libero, eu imperdiet lacus tincidunt vitae. Nam ut mi ultrices, fermentum sapien
+                        sit amet, commodo urna. Nunc viverra varius dictum. Mauris faucibus quam nulla, vitae tempor
+                        lorem convallis ut. </p>
+                    <a href="entrada.html?id=1" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loeadin="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagenblog">
+                    </picture>
+                </div>
+                <div class="entrada-contenido centrar-texto">
+                    <h4 class="no-margin centrar-texto">Fáciles recetas de café</h4>
+                    <p> Fusce commodo luctus nunc id tincidunt. Vivamus lacinia risus ut nibh fermentum ultrices. Cras
+                        viverra nibh libero, eu imperdiet lacus tincidunt vitae. Nam ut mi ultrices, fermentum sapien
+                        sit amet, commodo urna. Nunc viverra varius dictum. Mauris faucibus quam nulla, vitae tempor
+                        lorem convallis ut. </p>
+                    <a href="entrada.html?id=2" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loeadin="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagenblog">
+                    </picture>
+                </div>
+                <div class="entrada-contenido centrar-texto">
+                    <h4 class="no-margin centrar-texto">Todos los beneficios del café</h4>
+                    <p> Fusce commodo luctus nunc id tincidunt. Vivamus lacinia risus ut nibh fermentum ultrices. Cras
+                        viverra nibh libero, eu imperdiet lacus tincidunt vitae. Nam ut mi ultrices, fermentum sapien
+                        sit amet, commodo urna. Nunc viverra varius dictum. Mauris faucibus quam nulla, vitae tempor
+                        lorem convallis ut. </p>
+                    <a href="entrada.html?id=3" class="boton boton--primario ">Leer Entrada</a>
+                </div>
+            </article>
+        </main>
+        <aside class="sidedar">
+            <h3 class="centrar-texto">Nuestros Cursos y Talleres</h3>
+
+            <ul class="cursos no-padding">
+                <li class="widget-curso ">
+                    <h4 class="no-margin centrar-texto">Técnicas de extracción de café</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo(s):
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="cursos.html#extraccion-cafe" class="boton boton--secundario">Más Informacion sobre nuestros cursos</a>
+                </li>
+
+                <li class="widget-curso">
+                    <h4 class="no-margin centrar-texto">Recetas de café fáciles de preparar</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo(s):
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="cursos.html#recetas-cafe" class="boton boton--secundario">Más Informacion sobre nuestros cursos</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/up.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/modernizr.js"></script>
+ 
+    
+</body>
+
+</html>

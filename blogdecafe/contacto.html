@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo_size.jpg" type="image/x-icon">
+    <meta name="description" content="Página Web de Blog de Café">
+    <title>Contacto</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BlogDeCafé">
+    <meta property="og:image" content="/img/logo_size.jpg">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Outfit&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./font/fontello.css">
+    <link rel="stylesheet" href="./font/style.css">
+
+    <script src="../js/up.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!--Actualizar jqueary para funcionamiento de boton subir -->
+</head>
+
+<body>
+    <span class="ir-arriba icon-up-circle"></span>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de Café (Consejos para mejorar y cursos)</h2>
+            <p class="no-margin">Aprende con los mejores una gran experiencia a adquirir.</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto">Contacto</h3>
+
+        <div class="contacto-bg"></div>
+
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre: </label>
+                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" required>
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="email">Correo eléctronico: </label>
+                <input class="campo__field" type="email" placeholder="Tu Email" id="email" required>
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje: </label>
+                <textarea class="campo__field campo__field--textarea" type="text" placeholder="Tu Mensaje" id="mensaje" required></textarea>
+            </div>
+
+            <div class="campo"> 
+                <input type="submit" value="Enviar" class="boton boton--primario ">
+            </div>
+        </form>
+    </main>
+    
+    
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/up.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/modernizr.js"></script>
+</body>
+
+</html>

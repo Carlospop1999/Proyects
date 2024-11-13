@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo_size.jpg" type="image/x-icon">
+    <meta name="description" content="Página Web de Blog de Café">
+    <title>Blog Café</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BlogDeCafé">
+    <meta property="og:image" content="/img/logo_size.jpg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Outfit&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./font/fontello.css">
+    <link rel="stylesheet" href="./font/style.css">
+
+    <script src="../js/up.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!--Actualizar jqueary para funcionamiento de boton subir -->
+</head>
+
+<body>
+    <span class="ir-arriba icon-up-circle"></span>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de Café (Consejos para mejorar y cursos)</h2>
+            <p class="no-margin">Aprende con los mejores una gran experiencia a adquirir.</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h3 id="titulo" class="centrar-texto">Entrada</h3>
+
+        <img id="imagen" class="entrada-img" src= alt="Entradas">
+
+    <p>
+        Vestibulum consectetur mi ut lorem euismod finibus. Cras ac lobortis erat. Aliquam erat volutpat. Vivamus massa
+        sem, euismod et tortor mollis, venenatis tempor diam. Suspendisse mi dolor, tincidunt lacinia tortor fringilla,
+        posuere ultricies leo. Etiam pretium turpis diam, quis semper tortor vulputate nec. Donec fermentum, lorem ut
+        vehicula hendrerit, magna purus sollicitudin mi, vel ullamcorper ligula felis in odio. Quisque a sollicitudin
+        augue. Vestibulum vestibulum dolor vel lacus facilisis, eu rhoncus nibh vestibulum. Duis libero enim, aliquet et
+        ipsum ut, mattis finibus elit. Fusce commodo luctus nunc id tincidunt. Vivamus lacinia risus ut nibh fermentum
+        ultrices. Cras viverra nibh libero, eu imperdiet lacus tincidunt vitae. Nam ut mi ultrices, fermentum sapien sit
+        amet, commodo urna. Nunc viverra varius dictum. Mauris faucibus quam nulla, vitae tempor lorem convallis ut.
+    </p>
+
+    <p>
+        Maecenas eu purus non augue venenatis tempor id vel eros. Proin quis ex mattis, lacinia felis a, consectetur
+        est.
+        Etiam augue dui, suscipit congue faucibus consequat, faucibus at tortor. Vivamus turpis dolor, iaculis sed
+        vestibulum ac, sodales vel nulla. Sed tincidunt sapien quis tincidunt sagittis. Nunc molestie libero diam, in
+        rhoncus justo ultricies ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+        egestas. Vestibulum vitae maximus elit. Quisque varius felis nec congue pretium. Fusce et nulla at mauris
+        interdum
+        interdum convallis ut magna. Morbi molestie varius erat sed molestie. Maecenas cursus faucibus nibh, vitae
+        pellentesque diam dapibus sed. Nulla imperdiet sollicitudin blandit. Aliquam dignissim malesuada libero nec
+        laoreet.
+    </p>
+
+    <p>
+        Integer fermentum mauris dolor, eget pulvinar nisl blandit at. Quisque a placerat sem, quis tristique felis.
+        Aliquam efficitur elit suscipit, pulvinar neque non, mollis ipsum. Donec vel mauris purus. Donec ex enim,
+        convallis et fringilla eget, finibus non ligula. Curabitur ac laoreet elit. Maecenas non augue vitae ante
+        efficitur lacinia et eu urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non convallis turpis,
+        id luctus urna. Cras facilisis, felis nec sollicitudin facilisis, sem justo volutpat ligula, vel auctor lacus
+        sem vitae mauris. Aliquam eu nisi consequat, tempus ante a, facilisis elit. In hac habitasse platea dictumst.
+        Nullam massa augue, sodales lobortis scelerisque sed, gravida at nunc. Ut et ante dignissim, dignissim sem ut,
+        eleifend arcu.
+    </p>
+
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para obtener el valor de un parámetro en la URL
+        function obtenerParametro(parametro) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(parametro);
+        }
+
+        // Definición de contenido para cada artículo
+        const articulos = {
+            1: {
+                titulo: "Tipos de Grano de Café",
+                imagen: "img/blog1.jpg"
+            },
+            2: {
+                titulo: "Recetas de Café Fáciles",
+                imagen: "img/blog2.jpg"
+            },
+            3: {
+                titulo: "Beneficios del Café",
+                imagen: "img/blog3.jpg"
+            }
+        };
+
+        // Obtener el parámetro 'id' de la URL
+        const id = obtenerParametro('id');
+
+        // Verificar si el artículo existe en el objeto y actualizar el contenido
+        if (id && articulos[id]) {
+            document.getElementById('titulo').innerText = articulos[id].titulo;
+            document.getElementById('imagen').src = articulos[id].imagen;
+        } else {
+            document.getElementById('titulo').innerText = "Artículo no encontrado";
+            document.getElementById('imagen').src = "img/default.jpg"; // Imagen por defecto si no se encuentra el artículo
+        }
+    </script>
+    <script src="../js/up.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/modernizr.js"></script>
+</body>
+
+</html>
