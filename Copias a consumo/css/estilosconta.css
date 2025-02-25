@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #5F9AAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 12px;
+}
+
+.form-content{
+    background: linear-gradient(
+        50deg,
+        rgba(40,42,55,1) 50%,
+        rgba(40,42,55,0.7)),
+        url(/images/logo.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        width: 1000px;
+        border-radius: 25px;
+}
+
+.form-content h2{
+    color: aliceblue;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+label{
+    font-size: 17px;
+    color: beige;
+    margin-bottom: 15px;
+    
+}
+
+input, textarea{
+    padding: 17px 14 px;
+    background-color: white;
+    border: 0;
+    font-size: 15px;
+    color: black;
+    padding: 6px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+:focus{
+    outline: 1px solid white;
+}
+
+.btn{
+    background-color: aqua;
+    width: 150px;
+    font-size: 16px;
+    padding: auto;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .3px;
+}
+
+.btn:hover{
+    background-color: #222;
+}
+
+.btn2{
+    background-color: aqua;
+    width: 150px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.btn2:hover{
+    background-color: #222;
+}
+
+.btn-wsp{
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    bottom: 30px;
+    left: 20px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10 px rgb(0, 0, 0,0.3);
+    z-index: 100;
+}
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+
+@media(max-width:991px){
+    body{
+        padding: 30px;
+    }
+
+    .form-content{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+}

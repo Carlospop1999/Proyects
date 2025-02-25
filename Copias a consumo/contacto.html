@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible0" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíanos un mensaje.</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./font/fontello.css">
+    <link rel="stylesheet" href="./font/style.css">
+    <link rel="stylesheet" href="./css/estilosconta.css">
+</head>
+<body>
+
+    <a href="https://api.whatsapp.com/send?phone=525579869209"
+    class="btn-wsp" target="_blank" alt="WhatsApp." title="Chatea."> 
+<i class="icon-whatsapp"></i>
+</a>
+
+
+    <div class="form-content">
+        <h2>Enviar un mensaje.</h2>
+        <form action="https://formsubmit.co/direccioncopiasaconsumo@gmail.com" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre Completo*" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" placeholder="Correo electrónico*" required>
+
+            <label for="subject">Asunto</label>
+            <input type="text" name="subject" id="subject" placeholder="Tu asunto*" required>
+
+            <label for="comments">Mensaje</label>
+            <textarea name="comments" id="comments" placeholder="Tu mensaje" cols="30" rows="5"></textarea>
+
+            <input class="btn" type="submit" value="Enviar">
+            <a class="btn2" href="./index.html">Volver</a>
+            
+
+            <input type="hidden" name="_next" value="https://copiasaconsumo.com/contacto.html">
+            <input type="hidden" name="_captcha" value="true">
+
+        </form>
+    </div>
+</body>
+</html>
