@@ -1,0 +1,46 @@
+{
+    "empleados" : [
+        {
+            "id" : 1,
+            "nombre" : "Carlos",
+            "puesto" : "Desarrollador Web",
+            "edad" : 25
+        },
+        {
+            "id" : 2,
+            "nombre" : "Arturo",
+            "puesto" : "Developer",
+            "edad" : 27
+        },
+        {
+            "id" : 3,
+            "nombre" : "Ricardo",
+            "puesto" : "CiberSeguridad",
+            "edad" : 29
+        },
+        {
+            "id" : 4,
+            "nombre" : "Miguel",
+            "puesto" : "UX / UI",
+            "edad" : 21
+        },
+        {
+            "id" : 5,
+            "nombre" : "Karla",
+            "puesto" : "Secretaria",
+            "edad" : 22
+        },
+        {
+            "id" : 6,
+            "nombre" : "Monica",
+            "puesto" : "Marketing",
+            "edad" : 32
+        },
+        {
+            "id" : 7,
+            "nombre" : "Jimena",
+            "puesto" : "Servidores",
+            "edad" : 38
+        }
+    ]
+}
