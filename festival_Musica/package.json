@@ -24,8 +24,13 @@
   },
   "homepage": "https://github.com/Carlospop1999/Proyects#readme",
   "devDependencies": {
+    "glob": "^11.0.1",
     "gulp": "^5.0.0",
-    "gulp-sass": "^6.0.0",
-    "sass": "^1.82.0"
+    "gulp-clean-css": "^4.3.0",
+    "gulp-debug": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.86.3",
+    "sharp": "^0.34.1"
   }
 }
